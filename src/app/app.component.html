@@ -1,0 +1,13 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<mat-sidenav-container class="sidenav-container" autosize>
+  <mat-sidenav #sidenav align="end" [(opened)]="this.apiService.sideBarOpen" class="sidenav" mode="over">
+    <app-sidenavcontent></app-sidenavcontent>
+  </mat-sidenav>
+  <div class="sidenav-content">
+    <app-map></app-map>
+    <app-header></app-header>
+    <app-address></app-address>
+    <app-list class="mobile{{apiService.isItMobile()}}"></app-list>
+    <router-outlet></router-outlet>
+  </div>
+</mat-sidenav-container>

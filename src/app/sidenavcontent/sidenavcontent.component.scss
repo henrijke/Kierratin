@@ -1,0 +1,36 @@
+#sidenav{
+  .markers{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    img{
+      flex-grow: 0;
+      flex-shrink:0;
+      flex-basis: content;
+    }
+
+  }
+}
+.tip{
+  height: 80px;
+  .tip-pic{
+    float:left;
+    height:75px;
+    width:auto;
+  }
+  p{
+    padding-top: 20px;
+    margin-left: 10px;
+  }
+}
+
+hr {
+  clear: both;
+}
+
+#tipoftheday {
+  padding-left: 57px;
+  padding-top: 0;
+  max-width: 300px;
+}

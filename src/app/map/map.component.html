@@ -1,0 +1,29 @@
+<article>
+  <agm-map id="map" #gm [latitude]="this.apiService.userLat" [longitude]="this.apiService.userLng" [zoom]=12>
+    <agm-marker *ngFor="let point of apiService.recyclingPoints" [latitude]=point.lat [longitude]=point.lng
+              (markerClick)="openIW(infoWindow)" [iconUrl]="iconUrler(point)">
+    <agm-info-window #infoWindow>
+        <div class="recyclingPointWindow">
+            <p class="header">{{point.name}}</p>
+            <!--<button (click)='getRouteHere(point.address)'>Reittiohjeet tänne:-)</button>-->
+            <div class="flexThis"><mat-icon class='icon-helper'>location_on</mat-icon><p class="subheader">{{point.address}}</p></div>
+            <p class="subheader">Kierrätyspaikasta huolehtii: {{point.administrator}}</p>
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Mitä tänne voi tuoda?
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <ul class='no-style' *ngFor="let waste of point.type_id">
+                    <li class='color_{{waste}}'>{{waste | wastename}}</li>
+                </ul>
+            </mat-expansion-panel>
+            <div class="flexThis"><mat-icon class='icon-helper'>access_time</mat-icon><p class="flexText">Aukioloajat: {{point.openingTime}}</p></div>
+            <div class="flexThis"><mat-icon class='icon-helper'>contact_phone</mat-icon><p class="flexText">Yhteystiedot: {{point.info}}</p></div>
+        </div>
+    </agm-info-window>
+  </agm-marker>
+</agm-map>
+<button *ngIf="!apiService.isItMobile()" id="hiderButton" mat-fab (click)="apiService.hideList()"><mat-icon>check_box</mat-icon></button>
+</article>
+

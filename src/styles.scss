@@ -1,0 +1,136 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+$main-blue: #1A6C8C;
+$main-green: #89B732;
+$main-green-darker: #539D38;
+$main-green-lighter: #C0CF3A;
+$main-blue-lighter: #1A8A6D;
+
+@mixin trashbox($color){
+  background-color: $color;
+  border-radius: 15px;
+  padding:5px;
+  padding-left:10px;
+  color:white;
+}
+
+.color_100{
+  @include trashbox(#4D4D4D);
+}
+.color_101{
+  @include trashbox(#C1BCB2);
+}
+.color_102{
+  @include trashbox(#8B8156);
+}
+.color_103{
+  @include trashbox(#9E205D);
+}
+.color_104{
+  @include trashbox(#2242E2);
+}
+.color_105{
+  @include trashbox(#347896);
+}
+.color_106{
+  @include trashbox(#99CAF0);
+}
+.color_107{
+  @include trashbox(#D2272A);
+}
+.color_108{
+  @include trashbox(#277D0C);
+}
+.color_109{
+  @include trashbox(#F0C0E2);
+}
+.color_110{
+  @include trashbox(#d6d31d);
+}
+.color_111{
+  @include trashbox(#D5D098);
+}
+.color_113{
+  @include trashbox(#B1EA49);
+}
+.color_114{
+  @include trashbox(#FBB03B);
+}
+.color_115{
+  @include trashbox(#29ABE2);
+}
+.color_116{
+  @include trashbox(#C556AD);
+}
+.color_117{
+  @include trashbox(#D57170);
+}
+.color_118{
+  @include trashbox(#bababa);
+}
+.color_119{
+  @include trashbox(#754C24);
+}
+
+.no-style{
+  list-style-type: none;
+}
+
+html, body {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+.recyclingPointWindow {
+  max-width: 300px;
+}
+
+.hover:hover {
+  font-size:110%;
+  background-color: $main-blue;
+  color:white;
+  .remove{
+    color: white;
+
+  }
+}
+.icon-helper{
+  position: relative;
+  top:12px;
+}
+
+.mat-card {
+  padding-top: 12px !important;
+  padding-bottom: 0 !important;
+}
+.pointer {
+    cursor:pointer;
+}
+
+
+#noMobileField {
+  /*.mat-form-field-label {
+    color: $main-blue;
+  }*/
+  .mat-form-field-ripple {
+    background-color: $main-blue;
+  }
+
+  .mat-form-field-label .mat-input-placeholder .mat-form-field-placeholder .ng-tns-c14-2 .ng-star-inserted .mat-empty .mat-form-field-empty {
+    color: rgba(0, 0, 0, 0.7);
+  }
+
+}
+
+#waste-list {
+  .mat-form-field-ripple {
+    background-color: $main-blue;
+  }
+
+  #header > div > mat-toolbar > mat-toolbar-row > form > mat-form-field > div > div.mat-input-flex.mat-form-field-flex > div > span > label .mat-focused .mat-form-field-label {
+    color:white !important;
+    background-color: white;
+  }
+
+}

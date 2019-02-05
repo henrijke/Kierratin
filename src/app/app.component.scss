@@ -1,0 +1,49 @@
+.sidenav-content {
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+app-sidenavcontent {
+  max-width: 300px;
+}
+
+.sidenav {
+  padding: 20px;
+}
+
+.mobiletrue{
+  position: fixed;
+  bottom:0;
+  width: 90%;
+  left: 10%;
+}
+
+.mobilefalse{
+  position: absolute;
+  left: 0;
+  top: 23%;
+  width:20%;
+  min-width: 350px;
+  max-height: 60%;
+}
+
+app-address{
+  position: absolute;
+  margin:auto;
+  width: 33%;
+  min-width: 330px;
+  left: 33%;
+  top: 125px;
+}
+
+app-header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.cross {
+  cursor:pointer;
+}
